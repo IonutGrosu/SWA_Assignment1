@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Dk Weather (XMLHttpRequest)</h1>
+    <label for="cityDropdown">Select a city:</label>
+    <select name="cityDropdown" id="cityDropdown">
+      <option value="Horsens">Horsens</option>
+      <option value="Aarhus">Aarhus</option>
+      <option value="Copenhagen">Copenhagen</option>
+    </select>
+    <button onclick="update()">Get forecast</button>
+
+    <br /><label>Next 24 hours:</label> <br /><textarea
+      id="nextDayForecastTextArea"
+      cols="50"
+      rows="10"
+      disabled
+    ></textarea>
+
+    <br /><label>Last measurement of each kind?</label> <br /><textarea
+      id="lastTempMeasurementTextArea"
+      cols="50"
+      rows="10"
+      disabled
+    ></textarea>
+    <textarea
+      id="lastPrecipitationMeasurementTextArea"
+      cols="50"
+      rows="10"
+      disabled
+    ></textarea>
+    <textarea
+      id="lastWindMeasurementTextArea"
+      cols="50"
+      rows="10"
+      disabled
+    ></textarea>
+    <textarea
+      id="lastCloudMeasurementTextArea"
+      cols="50"
+      rows="10"
+      disabled
+    ></textarea>
+
+    <br /><label
+      >Minimum temperature for the last day:<span
+        style="font-weight: bold"
+        id="minTempSpan"
+        >-</span
+      ></label
+    >
+
+    <br /><label
+      >Maximum temperature for the last day:<span
+        style="font-weight: bold"
+        id="maxTempSpan"
+        >-</span
+      ></label
+    >
+
+    <br /><label
+      >Total precipitation for the last day:<span
+        style="font-weight: bold"
+        id="totalPrecipitationSpan"
+        >-</span
+      ></label
+    >
+
+    <br /><label
+      >Average wind speed for the last day:<span
+        style="font-weight: bold"
+        id="averageWindSpeed"
+        >-</span
+      ></label
+    >
+
+    <br /><a href="index_fetch.html">Fetch implementation >></a> <br /><a
+      href="upload.html"
+      >Post data to server >></a
+    >
+  </body>
+</html>
