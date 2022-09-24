@@ -62,6 +62,7 @@ function createWindDatapoint(type, time, place, value, unit, direction) {
 }
 
 const update = () => {
+  console.log("using fetch");
   var selectedCity = document.getElementById("cityDropdown").value;
 
   get24hForecast(selectedCity);
@@ -79,7 +80,7 @@ const get24hForecast = (city) => {
     textArea.value = prettyData;
   };
   xhr.onerror = () => {
-    console.log("Something went wrong habibi");
+    console.log("Something went wrong");
   };
   xhr.send();
 };
@@ -116,7 +117,8 @@ const getLastMeasurementSet = (city) => {
     }
   };
   xhr.onerror = () => {
-    console.log("Something went wrong habibi");
+    document.getElementById("errorSpan").innerText = "Something went wrong.";
+    console.log("Something went wrong");
   };
   xhr.send();
 };
@@ -158,7 +160,7 @@ const getHistoricData = (city) => {
     ).innerHTML = `${averageWindSpeed.toFixed(3)} m/s`;
   };
   xhr.onerror = () => {
-    console.log("Something went wrong habibi");
+    console.log("Something went wrong");
   };
   xhr.send();
 };

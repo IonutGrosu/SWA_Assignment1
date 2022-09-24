@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather forecast</title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <script src="index_fetch.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <h1>Dk Weather (Fetch)</h1>
@@ -16,7 +16,8 @@
       <option value="Aarhus">Aarhus</option>
       <option value="Copenhagen">Copenhagen</option>
     </select>
-    <button onclick="update()">Get forecast</button>
+    <button onclick="update()">Get forecast (Fetch)</button>
+    <span id="errorSpan" style="color: red"></span>
 
     <br /><label>Next 24 hours:</label> <br /><textarea
       id="nextDayForecastTextArea"
@@ -83,7 +84,7 @@
     >
 
     <br /><a href="index.html">XMLHttpRequest implementation >></a> <br /><a
-      href="upload.html"
+      href="../upload/upload.html"
       >Post data to server >></a
     >
   </body>

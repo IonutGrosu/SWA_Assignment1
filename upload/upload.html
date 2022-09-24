@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="upload.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <script src="upload_fetch.js"></script>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
     <textarea id="tempTextArea" cols="50" rows="8">
@@ -19,6 +20,8 @@
       }
     </textarea>
 
-    <button onclick="sendData()">Send</button>
+    <button onclick="sendDataXML()">Send (XMLHttpRequest)</button>
+    <button onclick="sendDataFetch()">Send (Fetch)</button>
+    <span id="errorSpan" style="color: red"></span>
   </body>
 </html>

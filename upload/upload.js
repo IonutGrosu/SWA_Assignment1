@@ -1,4 +1,4 @@
-const sendData = () => {
+const sendDataXML = () => {
   const textToSend = document.getElementById("tempTextArea").value;
   const jsonObj = JSON.parse(textToSend);
   const jsonText = JSON.stringify(jsonObj);
@@ -10,7 +10,7 @@ const sendData = () => {
     console.log(xhr.responseText);
   };
   xhr.onerror = () => {
-    console.log("Something went wrong habibi");
+    console.log("Something went wrong");
   };
   xhr.send(jsonText);
 };
