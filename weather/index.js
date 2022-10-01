@@ -111,7 +111,7 @@ const getLastMeasurementSet = (city) => {
           var textArea = document.getElementById(
             "lastCloudMeasurementTextArea"
           );
-          textArea.value = JSON.stringify(dataPoints[l - i - 1], null, 3);
+          textArea.value = JSON.stringify(dataPoints[l - i], null, 3);
         default:
       }
     }
@@ -149,15 +149,19 @@ const getHistoricData = (city) => {
       }
     }
 
-    document.getElementById("maxTempSpan").innerHTML = `${maxTemp} °C`;
-    document.getElementById("minTempSpan").innerHTML = `${minTemp} °C`;
+    document.getElementById("maxTempSpan").innerHTML = `${maxTemp.toFixed(
+      1
+    )} °C`;
+    document.getElementById("minTempSpan").innerHTML = `${minTemp.toFixed(
+      1
+    )} °C`;
     document.getElementById(
       "totalPrecipitationSpan"
-    ).innerHTML = `${totalPrecipitation} mm`;
+    ).innerHTML = `${totalPrecipitation.toFixed(2)} mm`;
     averageWindSpeed /= 24;
     document.getElementById(
       "averageWindSpeed"
-    ).innerHTML = `${averageWindSpeed.toFixed(3)} m/s`;
+    ).innerHTML = `${averageWindSpeed.toFixed(2)} m/s`;
   };
   xhr.onerror = () => {
     console.log("Something went wrong");

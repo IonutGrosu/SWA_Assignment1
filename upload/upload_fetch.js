@@ -12,6 +12,5 @@ const sendDataFetch = () => {
     body: jsonText,
   })
     .then((res) => (res.ok ? res : Promise.reject(res)))
-    .then((res) => console.log(res.JSON))
     .catch((e) => console.log(e));
 };
