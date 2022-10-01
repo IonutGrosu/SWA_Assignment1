@@ -125,7 +125,8 @@ const getLastMeasurementSet = (city) => {
           default:
         }
       }
-    });
+    })
+    .catch((error) => console.log(`Something went wrong: ${error}`));
 };
 
 const getHistoricData = (city) => {
@@ -171,5 +172,6 @@ const getHistoricData = (city) => {
       document.getElementById(
         "averageWindSpeed"
       ).innerHTML = `${averageWindSpeed.toFixed(2)} m/s`;
-    });
+    })
+    .catch((error) => console.log(`Something went wrong: ${error}`));
 };
